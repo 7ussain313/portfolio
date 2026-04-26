@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans dark:bg-[#0d0d1a] bg-slate-50 dark:text-white text-slate-900 transition-colors duration-300 overflow-x-hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply dark:bg-[#0d0d1a] bg-slate-100;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-violet-600 rounded-full;
+  }
+
+  ::selection {
+    @apply bg-violet-500/30 text-violet-200;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-gradient-to-r from-violet-500 via-purple-400 to-cyan-400 bg-clip-text text-transparent;
+  }
+
+  .glass-card {
+    @apply dark:bg-white/[0.03] bg-white dark:border-white/[0.08] border-slate-200 border rounded-2xl backdrop-blur-sm;
+  }
+
+  .section-pad {
+    @apply py-24 px-6;
+  }
+
+  .glow {
+    box-shadow: 0 0 60px rgba(124, 58, 237, 0.15);
+  }
+
+  .glow-hover:hover {
+    box-shadow: 0 0 40px rgba(124, 58, 237, 0.2);
+    border-color: rgba(124, 58, 237, 0.35);
+  }
+
+  .gradient-border {
+    position: relative;
+    background: linear-gradient(var(--cb, #ffffff), var(--cb, #ffffff)) padding-box,
+                linear-gradient(135deg, #7c3aed, #06b6d4) border-box;
+    border: 1px solid transparent;
+  }
+
+  .dark .gradient-border {
+    --cb: #13131f;
+  }
+}

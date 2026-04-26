@@ -1,0 +1,133 @@
+export const personal = {
+  name: 'Hussain Ali',
+  title: 'Full Stack Developer',
+  tagline: 'Building scalable web solutions & high-performance systems.',
+  location: 'Aali, Bahrain',
+  email: 'hussainali04.dev@gmail.com',
+  github: 'https://github.com/7ussain313/',
+  linkedin: 'https://www.linkedin.com/in/hussain-ali-a771063b5/',
+  bio: 'Versatile Full Stack Developer with a strong theoretical foundation from the University of Bahrain and intensive, project-based engineering at Reboot Coding Institute. Proven track record in building scalable web solutions (React, Go, Laravel), mobile applications (Flutter), and high-performance systems (Rust). Experienced in solving complex real-world problems through the 01Edu peer-to-peer methodology.',
+  cvUrl: '/hussain-cv.pdf',
+}
+
+export const skillGroups = [
+  {
+    label: 'Languages',
+    icon: '⟨/⟩',
+    color: 'from-violet-500 to-purple-600',
+    skills: ['Go', 'Rust', 'Java', 'C++', 'TypeScript', 'JavaScript', 'PHP', 'SQL'],
+  },
+  {
+    label: 'Web Development',
+    icon: '🌐',
+    color: 'from-blue-500 to-cyan-500',
+    skills: ['React.js', 'Node.js', 'Laravel', 'Tailwind CSS', 'HTML5', 'CSS3'],
+  },
+  {
+    label: 'Mobile & Backend',
+    icon: '📱',
+    color: 'from-emerald-500 to-teal-500',
+    skills: ['Flutter', 'Firebase', 'Supabase', 'REST API', 'GraphQL', 'WebSockets', 'JWT'],
+  },
+  {
+    label: 'Tools & Databases',
+    icon: '🛠',
+    color: 'from-orange-500 to-amber-500',
+    skills: ['Git', 'Docker', 'SQLite3'],
+  },
+  {
+    label: 'Architecture',
+    icon: '🏗',
+    color: 'from-rose-500 to-pink-500',
+    skills: ['OOP', 'Domain Driven Design', 'Test Driven Dev', 'MVC'],
+  },
+  {
+    label: 'Soft Skills',
+    icon: '💡',
+    color: 'from-indigo-500 to-violet-500',
+    skills: ['Problem Solving', 'Analytical Thinking', 'Team Management', 'Leadership', 'Communication', 'Self-Learning'],
+  },
+]
+
+export const projects = [
+  {
+    id: 1,
+    title: 'Social Network Platform',
+    description: 'A full social network system similar to Facebook with real-time chat, posts, groups, follows, and notifications.',
+    tech: ['React.js', 'Go', 'WebSockets', 'Docker', 'SQLite'],
+    github: '',
+    live: '',
+    accent: 'from-violet-600 to-purple-600',
+    institute: 'Reboot Coding Institute',
+  },
+  {
+    id: 2,
+    title: 'Smart Road System',
+    description: 'Contributed to an intelligent smart road infrastructure system with real-time data processing.',
+    tech: [],
+    github: '',
+    live: '',
+    accent: 'from-cyan-600 to-blue-600',
+    institute: 'Reboot Coding Institute',
+  },
+  {
+    id: 3,
+    title: 'Online Shopping System',
+    description: 'A full-featured e-commerce platform built with Laravel MVC — products, cart, orders, and user auth.',
+    tech: ['Laravel', 'PHP', 'MySQL', 'MVC'],
+    github: '',
+    live: '',
+    accent: 'from-emerald-600 to-teal-600',
+    institute: 'University of Bahrain',
+  },
+  {
+    id: 4,
+    title: 'Multiplayer FPS Game',
+    description: 'A real-time multiplayer first-person shooter game with networked gameplay and game-state sync.',
+    tech: [],
+    github: '',
+    live: '',
+    accent: 'from-rose-600 to-pink-600',
+    institute: 'Reboot Coding Institute',
+  },
+  {
+    id: 5,
+    title: 'Forum Platform',
+    description: 'A community forum with authentication, threads, replies, categories, and voting system.',
+    tech: [],
+    github: '',
+    live: '',
+    accent: 'from-orange-600 to-amber-600',
+    institute: 'Reboot Coding Institute',
+  },
+]
+
+export const education = [
+  {
+    id: 1,
+    degree: 'B.S. in IT Information Systems',
+    institution: 'University of Bahrain',
+    period: 'Sept 2022 – Present',
+    description: 'Strong theoretical CS foundation. Requires a 2-month industry training upon completion.',
+    type: 'university',
+    icon: '🎓',
+  },
+  {
+    id: 2,
+    degree: 'Full Stack Developer Training',
+    institution: 'Reboot Coding Institute (01edu)',
+    period: 'June 2024 – Present',
+    description: 'Intensive project-based engineering using the 01Edu peer-to-peer methodology. Built real-world systems across web, mobile, and systems programming.',
+    type: 'training',
+    icon: '🚀',
+  },
+  {
+    id: 3,
+    degree: 'Java Specialization',
+    institution: 'Reboot Coding Institute',
+    period: 'April 2026 – Present',
+    description: 'Advanced Java programming, enterprise patterns, and application development.',
+    type: 'training',
+    icon: '☕',
+  },
+]
