@@ -7,7 +7,7 @@ export const personal = {
   github: 'https://github.com/7ussain313/',
   linkedin: 'https://www.linkedin.com/in/hussain-ali-a771063b5/',
   bio: 'Versatile Full Stack Developer with a strong theoretical foundation from the University of Bahrain and intensive, project-based engineering at Reboot Coding Institute. Proven track record in building scalable web solutions (React, Go, Laravel), mobile applications (Flutter), and high-performance systems (Rust). Experienced in solving complex real-world problems through the 01Edu peer-to-peer methodology.',
-  cvUrl: '/hussain-cv.pdf',
+  cvUrl: './hussain-cv.pdf',
 }
 
 export const skillGroups = [
