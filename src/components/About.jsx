@@ -67,7 +67,7 @@ export default function About() {
             <div className="w-52 h-52 rounded-3xl bg-gradient-to-br from-violet-600 to-cyan-400 p-1 rotate-3 hover:rotate-0 transition-transform duration-500">
               <div className="w-full h-full rounded-[22px] overflow-hidden">
                 <img
-                  src="./profile.jpg"
+                  src="./profile.jpeg"
                   alt="Hussain Ali"
                   className="w-full h-full object-cover"
                 />
