@@ -135,7 +135,7 @@ export default function About() {
             <div className="flex items-center gap-3 dark:text-slate-400 text-slate-600 text-sm">
               <FiLinkedin size={16} className="text-violet-500 shrink-0" />
               <a href={personal.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-violet-500 transition-colors">
-                linkedin.com/in/hussain-ali
+                linkedin.com/in/hussainali04
               </a>
             </div>
           </div>

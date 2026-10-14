@@ -7,7 +7,7 @@ import { personal } from '../data/portfolioData'
 const contactItems = [
   { icon: FiMail, label: 'Email', value: personal.email, href: `mailto:${personal.email}` },
   { icon: FiGithub, label: 'GitHub', value: 'github.com/7ussain313', href: personal.github },
-  { icon: FiLinkedin, label: 'LinkedIn', value: 'linkedin.com/in/hussain-ali', href: personal.linkedin },
+  { icon: FiLinkedin, label: 'LinkedIn', value: 'linkedin.com/in/hussainali04', href: personal.linkedin },
   { icon: FiMapPin, label: 'Location', value: personal.location, href: null },
 ]
 
