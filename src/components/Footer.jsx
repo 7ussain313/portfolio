@@ -1,7 +1,7 @@
 import { FiGithub, FiLinkedin, FiMail, FiHeart } from 'react-icons/fi'
 import { personal } from '../data/portfolioData'
 
-const links = ['Home', 'About', 'Skills', 'Projects', 'Education', 'Contact']
+const links = ['Home', 'About', 'Skills', 'Projects', 'Experience', 'Education', 'Contact']
 
 const socials = [
   { icon: FiGithub, href: personal.github, label: 'GitHub' },
@@ -19,7 +19,7 @@ export default function Footer() {
             <a href="#home" className="text-xl font-black">
               <span className="gradient-text">H.Ali</span>
             </a>
-            <p className="text-sm dark:text-slate-500 text-slate-500 mt-1">Full Stack Developer · Bahrain</p>
+            <p className="text-sm dark:text-slate-500 text-slate-500 mt-1">Full-Stack Developer · Bahrain</p>
           </div>
 
           {/* Nav */}

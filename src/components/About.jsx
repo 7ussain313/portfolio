@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { FiMapPin, FiMail, FiGithub, FiLinkedin } from 'react-icons/fi'
-import { personal } from '../data/portfolioData'
+import { personal, projects, experience } from '../data/portfolioData'
 
+// Derived from the data file so the numbers can never contradict the page.
 const stats = [
-  { end: 2, suffix: '+', label: 'Years of Training' },
-  { end: 5, suffix: '+', label: 'Projects Built' },
-  { end: 15, suffix: '+', label: 'Technologies' },
+  { end: projects.length, suffix: '', label: 'Projects' },
+  { end: projects.filter(p => p.repo).length, suffix: '', label: 'Public Repos' },
+  { end: experience.length, suffix: '', label: 'Internship' },
   { end: 2, suffix: '', label: 'Institutions' },
 ]
 
@@ -67,8 +68,11 @@ export default function About() {
             <div className="w-52 h-52 rounded-3xl bg-gradient-to-br from-violet-600 to-cyan-400 p-1 rotate-3 hover:rotate-0 transition-transform duration-500">
               <div className="w-full h-full rounded-[22px] overflow-hidden">
                 <img
-                  src="./profile.png"
-                  alt="Hussain Ali"
+                  src="./profile.webp"
+                  width="208"
+                  height="208"
+                  loading="lazy"
+                  alt="Portrait of Hussain Ali"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -79,7 +83,7 @@ export default function About() {
               transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
               className="absolute -bottom-4 -right-4 px-3 py-2 rounded-xl glass-card text-sm font-semibold dark:text-white text-slate-800 shadow-lg"
             >
-              Full Stack Dev
+              Full-Stack Dev
             </motion.div>
           </div>
 

@@ -46,7 +46,7 @@ const socials = [
 ]
 
 export default function Hero() {
-  const typed = useTypewriter('Full Stack Developer')
+  const typed = useTypewriter(personal.title)
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -107,10 +107,11 @@ export default function Hero() {
 
         {/* Title — typewriter */}
         <motion.div variants={item} className="mb-6 h-10 flex items-center justify-center">
-          <span className="text-2xl md:text-3xl font-semibold gradient-text">
+          <p className="sr-only">{personal.title}</p>
+          <span aria-hidden="true" className="text-2xl md:text-3xl font-semibold gradient-text">
             {typed}
           </span>
-          <span className="ml-0.5 w-[3px] h-8 bg-violet-500 rounded-full animate-pulse inline-block" />
+          <span aria-hidden="true" className="ml-0.5 w-[3px] h-8 bg-violet-500 rounded-full animate-pulse inline-block" />
         </motion.div>
 
         {/* Tagline */}

@@ -117,9 +117,10 @@ export default function Contact() {
             <form ref={formRef} onSubmit={handleSubmit} className="glass-card p-8 flex flex-col gap-5">
               <div className="grid sm:grid-cols-2 gap-5">
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-semibold dark:text-slate-400 text-slate-600 uppercase tracking-wider">Name</label>
+                  <label htmlFor="contact-name" className="text-xs font-semibold dark:text-slate-400 text-slate-600 uppercase tracking-wider">Name</label>
                   <input
                     type="text"
+                    id="contact-name"
                     name="name"
                     value={form.name}
                     onChange={handleChange}
@@ -129,9 +130,10 @@ export default function Contact() {
                   />
                 </div>
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-semibold dark:text-slate-400 text-slate-600 uppercase tracking-wider">Email</label>
+                  <label htmlFor="contact-email" className="text-xs font-semibold dark:text-slate-400 text-slate-600 uppercase tracking-wider">Email</label>
                   <input
                     type="email"
+                    id="contact-email"
                     name="email"
                     value={form.email}
                     onChange={handleChange}
@@ -143,10 +145,11 @@ export default function Contact() {
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-semibold dark:text-slate-400 text-slate-600 uppercase tracking-wider">Subject</label>
+                <label htmlFor="contact-subject" className="text-xs font-semibold dark:text-slate-400 text-slate-600 uppercase tracking-wider">Subject</label>
                 <input
                   type="text"
-                  name="subject"
+                  id="contact-subject"
+                    name="subject"
                   value={form.subject}
                   onChange={handleChange}
                   required
@@ -156,9 +159,10 @@ export default function Contact() {
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-semibold dark:text-slate-400 text-slate-600 uppercase tracking-wider">Message</label>
+                <label htmlFor="contact-message" className="text-xs font-semibold dark:text-slate-400 text-slate-600 uppercase tracking-wider">Message</label>
                 <textarea
-                  name="message"
+                  id="contact-message"
+                    name="message"
                   value={form.message}
                   onChange={handleChange}
                   required

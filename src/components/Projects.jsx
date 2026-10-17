@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FiExternalLink, FiStar } from 'react-icons/fi'
+import { FiExternalLink, FiStar, FiGithub } from 'react-icons/fi'
 import { projects } from '../data/portfolioData'
 
 const categories = ['All', 'Featured', 'Full Stack', 'Mobile', 'Web', 'Systems', 'Java']
@@ -40,7 +40,7 @@ export default function Projects() {
             Projects
           </h2>
           <p className="mt-4 dark:text-slate-400 text-slate-600 max-w-xl mx-auto text-base">
-            18 projects across web, mobile, systems programming, and more.
+            {projects.length} projects across web, mobile, systems programming, and more. Source links are shown where the code is public.
           </p>
         </motion.div>
 
@@ -55,6 +55,8 @@ export default function Projects() {
           {categories.map(cat => (
             <button
               key={cat}
+              type="button"
+              aria-pressed={active === cat}
               onClick={() => setActive(cat)}
               className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
                 active === cat
@@ -84,25 +86,25 @@ export default function Projects() {
                 transition={{ duration: 0.3 }}
                 className="glass-card overflow-hidden glow-hover group flex flex-col relative"
               >
-                {/* Featured badge */}
-                {project.featured && (
-                  <div className="absolute top-4 right-4 z-10 flex items-center gap-1 px-2 py-0.5 rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 text-white text-[10px] font-bold">
-                    <FiStar size={9} /> Featured
-                  </div>
-                )}
-
                 {/* Top gradient bar */}
                 <div className={`h-1.5 bg-gradient-to-r ${project.accent}`} />
 
                 <div className="p-5 flex flex-col flex-1">
                   {/* Meta */}
-                  <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-start justify-between gap-2 mb-3">
                     <span className="text-[10px] font-semibold tracking-widest uppercase dark:text-slate-500 text-slate-400">
                       {project.institute}
                     </span>
-                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full bg-gradient-to-r ${project.accent} bg-opacity-10 dark:text-slate-300 text-slate-600 dark:bg-white/5 bg-slate-100`}>
-                      {project.category}
-                    </span>
+                    <div className="flex items-center gap-1.5 shrink-0">
+                      {project.featured && (
+                        <span className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 text-white text-[10px] font-bold">
+                          <FiStar size={9} aria-hidden="true" /> Featured
+                        </span>
+                      )}
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-full dark:text-slate-300 text-slate-600 dark:bg-white/5 bg-slate-100">
+                        {project.category}
+                      </span>
+                    </div>
                   </div>
 
                   {/* Title */}
@@ -130,22 +132,32 @@ export default function Projects() {
                   )}
 
                   {/* Links */}
-                  <div className="flex gap-3 pt-3 border-t dark:border-white/[0.06] border-slate-100">
-                    {project.live ? (
-                      <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-1.5 text-xs font-semibold dark:text-slate-400 text-slate-600 hover:text-violet-500 dark:hover:text-violet-400 transition-colors"
-                      >
-                        <FiExternalLink size={13} /> Live Demo
-                      </a>
-                    ) : (
-                      <span className="text-xs dark:text-slate-600 text-slate-400 font-medium">
-                        Private Repo
-                      </span>
-                    )}
-                  </div>
+                  {(project.repo || project.live) && (
+                    <div className="flex gap-4 pt-3 border-t dark:border-white/[0.06] border-slate-100">
+                      {project.repo && (
+                        <a
+                          href={project.repo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${project.title} source code on GitHub`}
+                          className="flex items-center gap-1.5 text-xs font-semibold dark:text-slate-300 text-slate-700 hover:text-violet-500 dark:hover:text-violet-400 transition-colors"
+                        >
+                          <FiGithub size={13} aria-hidden="true" /> Code
+                        </a>
+                      )}
+                      {project.live && (
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${project.title} live demo`}
+                          className="flex items-center gap-1.5 text-xs font-semibold dark:text-slate-300 text-slate-700 hover:text-violet-500 dark:hover:text-violet-400 transition-colors"
+                        >
+                          <FiExternalLink size={13} aria-hidden="true" /> Live Demo
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </div>
               </motion.article>
             ))}

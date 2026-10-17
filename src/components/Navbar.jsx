@@ -4,7 +4,7 @@ import { FiSun, FiMoon, FiMenu, FiX, FiGithub } from 'react-icons/fi'
 import { useTheme } from '../context/ThemeContext'
 import { personal } from '../data/portfolioData'
 
-const navLinks = ['Home', 'About', 'Skills', 'Projects', 'Education', 'Contact']
+const navLinks = ['Home', 'About', 'Skills', 'Projects', 'Experience', 'Education', 'Contact']
 
 export default function Navbar() {
   const { isDark, setIsDark } = useTheme()
@@ -77,6 +77,7 @@ export default function Navbar() {
         <div className="flex items-center gap-2">
           <a
             href={personal.github}
+            aria-label="GitHub profile"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:flex w-9 h-9 rounded-full items-center justify-center dark:bg-white/5 bg-slate-100 dark:border-white/10 border-slate-200 border dark:text-slate-400 text-slate-600 hover:text-violet-500 dark:hover:text-violet-400 transition-colors"
