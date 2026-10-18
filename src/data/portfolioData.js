@@ -314,10 +314,9 @@ export const experience = [
 export const education = [
   {
     id: 1,
-    // TODO(confirm): exact degree title — CV says "B.S. in Computer Science", portfolio previously said "IT Information Systems".
-    degree: 'B.S. in IT Information Systems',
+    degree: 'B.S. in Computer Science',
     institution: 'University of Bahrain',
-    period: 'Sept 2022 – Present',
+    period: 'Sept 2022 – 2026',
     description: 'Coursework spanning software engineering, databases and mobile development; senior project SooQna.',
     type: 'university',
     icon: '🎓',
