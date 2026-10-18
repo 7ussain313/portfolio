@@ -103,10 +103,12 @@ export default function Education() {
 function EducationCard({ item }) {
   return (
     <div className="glass-card p-6 max-w-sm w-full glow-hover transition-all duration-300">
-      <span className="text-[10px] font-semibold tracking-widest uppercase text-violet-500 dark:text-violet-400">
-        {item.period}
-      </span>
-      <h3 className="text-base font-bold dark:text-white text-slate-900 mt-1 mb-1">
+      {item.period && (
+        <span className="block text-[10px] font-semibold tracking-widest uppercase text-violet-500 dark:text-violet-400">
+          {item.period}
+        </span>
+      )}
+      <h3 className={`text-base font-bold dark:text-white text-slate-900 mb-1 ${item.period ? 'mt-1' : ''}`}>
         {item.degree}
       </h3>
       <p className="text-sm font-semibold dark:text-slate-300 text-slate-700 mb-3">
