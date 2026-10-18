@@ -128,6 +128,18 @@ export const projects = [
   },
   {
     id: 7,
+    title: 'Vault',
+    description: 'Bilingual (Arabic/English) gaming and esports community app with tournaments, community chat with AI moderation, direct messages, a marketplace and push notifications. Team project of three: I built the phone-OTP sign-in and password reset, the admin console, the Swiss-system tournament and match screens, and the Arabic localisation, and wrote Supabase migrations, row-level security policies and the Vercel deploy workflow.',
+    tech: ['Flutter', 'Dart', 'Supabase', 'PostgreSQL', 'Row-Level Security', 'Firebase Cloud Messaging', 'GitHub Actions', 'Vercel'],
+    repo: '',
+    live: 'https://vaultweb-alpha.vercel.app/',
+    accent: 'from-fuchsia-600 to-violet-600',
+    category: 'Mobile',
+    institute: 'Team project',
+    featured: true,
+  },
+  {
+    id: 8,
     title: 'Social Network Platform',
     description: 'Facebook-style social network: followers, public and private profiles, posts, groups and events, real-time private and group chat over WebSockets, and notifications. Go backend with SQLite migrations and a JavaScript frontend, each in its own Docker container.',
     tech: ['Go', 'WebSockets', 'SQLite', 'JavaScript', 'Docker'],
@@ -140,7 +152,7 @@ export const projects = [
   },
   // ── SYSTEMS ───────────────────────────────────────────────
   {
-    id: 8,
+    id: 9,
     title: 'Localhost (HTTP Server)',
     description: 'HTTP/1.1 server written from scratch in Rust: non-blocking I/O with epoll, multiple ports and virtual servers from a config file, CGI, file uploads, cookies and sessions, and custom error pages.',
     tech: ['Rust', 'HTTP/1.1', 'epoll', 'CGI', 'TCP'],
@@ -152,7 +164,7 @@ export const projects = [
     featured: false,
   },
   {
-    id: 9,
+    id: 10,
     title: '0-Shell',
     description: 'Minimal Unix shell in Rust that implements core commands (ls, cd, cat, cp, mv, rm, mkdir, echo) with system calls rather than calling external binaries.',
     tech: ['Rust', 'Unix', 'System Calls'],
@@ -164,7 +176,7 @@ export const projects = [
     featured: false,
   },
   {
-    id: 10,
+    id: 11,
     title: 'Net-Cat (TCP Chat)',
     description: 'Recreation of NetCat in Go: a multi-client TCP group chat server with message history, join/leave notifications and timestamped messages, using goroutines, channels and mutexes.',
     tech: ['Go', 'TCP', 'Goroutines', 'Channels'],
@@ -176,7 +188,7 @@ export const projects = [
     featured: false,
   },
   {
-    id: 11,
+    id: 12,
     title: 'Smart Road Intersection',
     description: 'Simulation in Rust of an intersection without traffic lights, where autonomous vehicles are coordinated to avoid collisions, with animation and end-of-run statistics.',
     tech: ['Rust', 'SDL2', 'Simulation'],
@@ -188,7 +200,7 @@ export const projects = [
     featured: false,
   },
   {
-    id: 12,
+    id: 13,
     title: 'Ray Tracer (RT)',
     description: 'Ray tracing renderer in Rust that draws 3D scenes with spheres, planes, cubes and cylinders, light sources, shadows and a movable camera.',
     tech: ['Rust', 'Computer Graphics'],
@@ -200,7 +212,7 @@ export const projects = [
     featured: false,
   },
   {
-    id: 13,
+    id: 14,
     title: 'Lem-in (Ant Farm)',
     description: 'Graph pathfinding program in Go that moves N ants from start to end of a colony in the minimum number of turns, choosing non-conflicting paths and rejecting malformed input.',
     tech: ['Go', 'Graph Algorithms'],
@@ -213,7 +225,7 @@ export const projects = [
   },
   // ── MOBILE ────────────────────────────────────────────────
   {
-    id: 14,
+    id: 15,
     title: 'Stock Market Simulator',
     description: 'Trading simulator that tracks 20 stocks with prices updated at least five times per second. Each new user gets $1,000,000 in virtual money to buy, sell and hold stocks, with a wallet, historical data and price charts. State is managed with Provider.',
     tech: ['Flutter', 'Dart', 'Provider', 'Real-time data', 'Charts'],
@@ -225,7 +237,7 @@ export const projects = [
     featured: false,
   },
   {
-    id: 15,
+    id: 16,
     title: 'KaQuiz (Friend Location Sharing)',
     description: "Full-stack app for sharing your location with friends: sign in with email, search for friends, send and accept friend requests, and see friends' last known locations on a map. While the app is open, it sends the user's location to a backend built from a Swagger specification every 5 seconds.",
     tech: ['Flutter', 'Dart', 'Maps', 'REST API'],
@@ -237,7 +249,7 @@ export const projects = [
     featured: false,
   },
   {
-    id: 16,
+    id: 17,
     title: 'Sky Map',
     description: 'Interactive night-sky map that uses GPS, the accelerometer and the magnetometer to show the planets, Sun, Moon and constellations in the direction the phone is pointing, redrawn at least 10 times per second. Tap any object to see a description.',
     tech: ['Flutter', 'Dart', 'Device sensors', 'Provider'],
@@ -249,7 +261,7 @@ export const projects = [
     featured: false,
   },
   {
-    id: 17,
+    id: 18,
     title: '2048',
     description: 'The 2048 puzzle game with swipe controls, animated tile movement and merging, and current and best scores. Bonus features: selectable grid sizes and sound.',
     tech: ['Flutter', 'Dart', 'Animations'],
@@ -261,7 +273,7 @@ export const projects = [
     featured: false,
   },
   {
-    id: 18,
+    id: 19,
     title: 'Car Insurance App',
     description: 'Team project: Flutter and Firebase app for vehicle registration, insurance requests and policies, accident reports and payments, with an admin side for approving policies and reviewing reports.',
     tech: ['Flutter', 'Firebase', 'Dart'],
@@ -274,7 +286,7 @@ export const projects = [
   },
   // ── JAVA ──────────────────────────────────────────────────
   {
-    id: 19,
+    id: 20,
     title: 'Neo4flix',
     description: 'Movie recommendation engine built from four Spring Boot microservices (movies, users, ratings, recommendations) on a Neo4j graph database, with an Angular frontend for searching, rating, filtering recommendations, a watchlist and sharing. Secured with OAuth 2.0, two-factor authentication and HTTPS, and deployed with Docker.',
     tech: ['Java', 'Spring Boot', 'Neo4j', 'Angular', 'Microservices', 'OAuth 2.0', 'Docker'],
@@ -286,7 +298,7 @@ export const projects = [
     featured: false,
   },
   {
-    id: 20,
+    id: 21,
     title: 'Travel Management System',
     description: 'Travel booking platform with admin, travel-manager and traveller roles: an admin dashboard, Stripe and PayPal payments, Elasticsearch search with autocomplete, personalised suggestions, feedback and reporting. Runs as replicated microservices on PostgreSQL and Neo4j, deployed with Docker and Ansible, with Jenkins CI, SonarQube and secrets managed in HashiCorp Vault.',
     tech: ['Java', 'Spring Boot', 'Microservices', 'PostgreSQL', 'Neo4j', 'Elasticsearch', 'Ansible', 'Jenkins'],
@@ -298,7 +310,7 @@ export const projects = [
     featured: false,
   },
   {
-    id: 21,
+    id: 22,
     title: "Let's Play (REST API)",
     description: 'RESTful CRUD API in Spring Boot with MongoDB for user and product management, with authentication and role-based access for admin and user roles.',
     tech: ['Java', 'Spring Boot', 'MongoDB', 'REST API'],
@@ -311,7 +323,7 @@ export const projects = [
   },
   // ── WEB ───────────────────────────────────────────────────
   {
-    id: 22,
+    id: 23,
     title: 'Click-Shop',
     description: 'Multi-role e-commerce platform (customer, seller, admin) with cart, checkout, promotions, reviews, favourites and seller applications reviewed by admins. Covered by PHPUnit feature and unit tests.',
     tech: ['Laravel 12', 'PHP', 'MySQL', 'PHPUnit', 'Tailwind CSS'],
@@ -323,7 +335,7 @@ export const projects = [
     featured: false,
   },
   {
-    id: 23,
+    id: 24,
     title: 'Angul-It',
     description: 'Multi-stage image CAPTCHA web app in Angular: validation on each stage, the ability to revisit earlier stages, and progress that survives a page refresh.',
     tech: ['Angular', 'TypeScript'],
@@ -335,7 +347,7 @@ export const projects = [
     featured: false,
   },
   {
-    id: 24,
+    id: 25,
     title: 'Custom JS Framework',
     description: 'JavaScript framework built from scratch — DOM abstraction, routing, state management and event handling — demonstrated with a TodoMVC app.',
     tech: ['JavaScript', 'Routing', 'State Management'],
@@ -347,7 +359,7 @@ export const projects = [
     featured: false,
   },
   {
-    id: 25,
+    id: 26,
     title: 'GraphQL Profile',
     description: 'Profile page that signs in against the school API with JWT, queries progress data with GraphQL and draws XP and audit statistics as hand-built SVG charts.',
     tech: ['TypeScript', 'GraphQL', 'JWT', 'SVG'],
@@ -359,7 +371,7 @@ export const projects = [
     featured: false,
   },
   {
-    id: 26,
+    id: 27,
     title: 'Groupie Tracker',
     description: 'Go web app that consumes a music-bands REST API and presents artists, concert locations and dates.',
     tech: ['Go', 'REST API', 'HTML', 'CSS'],
