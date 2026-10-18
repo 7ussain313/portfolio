@@ -1,5 +1,4 @@
 import { useState, useRef } from 'react'
-import { motion } from 'framer-motion'
 import { FiMail, FiGithub, FiLinkedin, FiMapPin, FiSend, FiCheckCircle, FiAlertCircle } from 'react-icons/fi'
 import emailjs from '@emailjs/browser'
 import { personal } from '../data/portfolioData'
@@ -46,161 +45,65 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="section-pad">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-16"
-        >
-          <span className="text-xs font-semibold tracking-[0.2em] uppercase gradient-text">Get In Touch</span>
-          <h2 className="text-4xl md:text-5xl font-black mt-2 dark:text-white text-slate-900">
-            Contact Me
-          </h2>
-          <p className="mt-4 dark:text-slate-400 text-slate-600 max-w-md mx-auto text-base">
-            Have a project in mind or just want to connect? My inbox is always open.
-          </p>
-        </motion.div>
+    <section className="contact" id="contact">
+      <div className="wrap">
+        <span className="label">Get In Touch</span>
+        <h2 className="ct-title"><span className="pearl-text">Contact</span> <em className="serif" style={{ color: 'var(--accent)' }}>Me</em></h2>
+        <p className="lead">Have a project in mind or just want to connect? My inbox is always open.</p>
 
-        <div className="grid lg:grid-cols-5 gap-10">
-          {/* Left — info */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.7 }}
-            className="lg:col-span-2 flex flex-col gap-4"
-          >
-            <div className="glass-card p-8 flex flex-col gap-6 h-full">
-              <div>
-                <h3 className="text-xl font-bold dark:text-white text-slate-900 mb-2">
-                  Let's work together
-                </h3>
-                <p className="text-sm dark:text-slate-400 text-slate-600 leading-relaxed">
-                  I'm currently available for freelance work and open to full-time opportunities. Let's build something great together.
-                </p>
-              </div>
-
-              <div className="flex flex-col gap-4">
-                {contactItems.map(({ icon: Icon, label, value, href }) => (
-                  <div key={label} className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-violet-600/20 to-cyan-400/20 flex items-center justify-center shrink-0">
-                      <Icon size={16} className="text-violet-500" />
-                    </div>
-                    <div>
-                      <p className="text-[10px] font-semibold uppercase tracking-wider dark:text-slate-500 text-slate-400">{label}</p>
-                      {href ? (
-                        <a href={href} target="_blank" rel="noopener noreferrer" className="text-sm dark:text-slate-300 text-slate-700 hover:text-violet-500 dark:hover:text-violet-400 transition-colors break-all">
-                          {value}
-                        </a>
-                      ) : (
-                        <p className="text-sm dark:text-slate-300 text-slate-700">{value}</p>
-                      )}
-                    </div>
+        <div className="ct-grid">
+          <div className="ct-card">
+            <h3>Let's work together</h3>
+            <p className="ct-sub">I'm currently available for freelance work and open to full-time opportunities. Let's build something great together.</p>
+            <ul className="ct-list">
+              {contactItems.map(({ icon: Icon, label, value, href }) => (
+                <li key={label}>
+                  <span className="ct-ic"><Icon size={16} /></span>
+                  <div>
+                    <span className="label">{label}</span>
+                    {href ? (
+                      <a href={href} target="_blank" rel="noopener noreferrer">{value}</a>
+                    ) : (
+                      <p>{value}</p>
+                    )}
                   </div>
-                ))}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <form ref={formRef} onSubmit={handleSubmit} className="ct-card ct-form">
+            <div className="ct-row">
+              <div className="ct-field">
+                <label htmlFor="contact-name">Name</label>
+                <input type="text" id="contact-name" name="name" value={form.name} onChange={handleChange} required placeholder="Your name" />
+              </div>
+              <div className="ct-field">
+                <label htmlFor="contact-email">Email</label>
+                <input type="email" id="contact-email" name="email" value={form.email} onChange={handleChange} required placeholder="your@email.com" />
               </div>
             </div>
-          </motion.div>
+            <div className="ct-field">
+              <label htmlFor="contact-subject">Subject</label>
+              <input type="text" id="contact-subject" name="subject" value={form.subject} onChange={handleChange} required placeholder="What's it about?" />
+            </div>
+            <div className="ct-field">
+              <label htmlFor="contact-message">Message</label>
+              <textarea id="contact-message" name="message" value={form.message} onChange={handleChange} required rows={5} placeholder="Tell me about your project or idea..." />
+            </div>
 
-          {/* Right — form */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.7 }}
-            className="lg:col-span-3"
-          >
-            <form ref={formRef} onSubmit={handleSubmit} className="glass-card p-8 flex flex-col gap-5">
-              <div className="grid sm:grid-cols-2 gap-5">
-                <div className="flex flex-col gap-1.5">
-                  <label htmlFor="contact-name" className="text-xs font-semibold dark:text-slate-400 text-slate-600 uppercase tracking-wider">Name</label>
-                  <input
-                    type="text"
-                    id="contact-name"
-                    name="name"
-                    value={form.name}
-                    onChange={handleChange}
-                    required
-                    placeholder="Your name"
-                    className="px-4 py-3 rounded-xl text-sm dark:bg-white/[0.04] bg-slate-50 dark:border-white/[0.08] border-slate-200 border dark:text-white text-slate-900 dark:placeholder-slate-600 placeholder-slate-400 focus:outline-none focus:border-violet-500 dark:focus:border-violet-500 transition-colors"
-                  />
-                </div>
-                <div className="flex flex-col gap-1.5">
-                  <label htmlFor="contact-email" className="text-xs font-semibold dark:text-slate-400 text-slate-600 uppercase tracking-wider">Email</label>
-                  <input
-                    type="email"
-                    id="contact-email"
-                    name="email"
-                    value={form.email}
-                    onChange={handleChange}
-                    required
-                    placeholder="your@email.com"
-                    className="px-4 py-3 rounded-xl text-sm dark:bg-white/[0.04] bg-slate-50 dark:border-white/[0.08] border-slate-200 border dark:text-white text-slate-900 dark:placeholder-slate-600 placeholder-slate-400 focus:outline-none focus:border-violet-500 dark:focus:border-violet-500 transition-colors"
-                  />
-                </div>
-              </div>
+            {status === 'success' && (
+              <p className="ct-status ok" role="status"><FiCheckCircle size={16} /> Message sent successfully! I'll get back to you soon.</p>
+            )}
+            {status === 'error' && (
+              <p className="ct-status bad" role="alert"><FiAlertCircle size={16} /> Something went wrong. Please try emailing me directly.</p>
+            )}
 
-              <div className="flex flex-col gap-1.5">
-                <label htmlFor="contact-subject" className="text-xs font-semibold dark:text-slate-400 text-slate-600 uppercase tracking-wider">Subject</label>
-                <input
-                  type="text"
-                  id="contact-subject"
-                    name="subject"
-                  value={form.subject}
-                  onChange={handleChange}
-                  required
-                  placeholder="What's it about?"
-                  className="px-4 py-3 rounded-xl text-sm dark:bg-white/[0.04] bg-slate-50 dark:border-white/[0.08] border-slate-200 border dark:text-white text-slate-900 dark:placeholder-slate-600 placeholder-slate-400 focus:outline-none focus:border-violet-500 dark:focus:border-violet-500 transition-colors"
-                />
-              </div>
-
-              <div className="flex flex-col gap-1.5">
-                <label htmlFor="contact-message" className="text-xs font-semibold dark:text-slate-400 text-slate-600 uppercase tracking-wider">Message</label>
-                <textarea
-                  id="contact-message"
-                    name="message"
-                  value={form.message}
-                  onChange={handleChange}
-                  required
-                  rows={5}
-                  placeholder="Tell me about your project or idea..."
-                  className="px-4 py-3 rounded-xl text-sm dark:bg-white/[0.04] bg-slate-50 dark:border-white/[0.08] border-slate-200 border dark:text-white text-slate-900 dark:placeholder-slate-600 placeholder-slate-400 focus:outline-none focus:border-violet-500 dark:focus:border-violet-500 transition-colors resize-none"
-                />
-              </div>
-
-              {/* Status messages */}
-              {status === 'success' && (
-                <div className="flex items-center gap-2 text-sm text-emerald-500 dark:text-emerald-400">
-                  <FiCheckCircle size={16} /> Message sent successfully! I'll get back to you soon.
-                </div>
-              )}
-              {status === 'error' && (
-                <div className="flex items-center gap-2 text-sm text-rose-500 dark:text-rose-400">
-                  <FiAlertCircle size={16} /> Something went wrong. Please try emailing me directly.
-                </div>
-              )}
-
-              <button
-                type="submit"
-                disabled={status === 'loading'}
-                className="flex items-center justify-center gap-2 py-3 px-6 rounded-xl font-semibold text-white bg-gradient-to-r from-violet-600 to-cyan-500 hover:shadow-xl hover:shadow-violet-500/30 hover:scale-[1.02] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed disabled:scale-100"
-              >
-                {status === 'loading' ? (
-                  <svg className="animate-spin w-4 h-4" fill="none" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" />
-                  </svg>
-                ) : (
-                  <FiSend size={16} />
-                )}
-                {status === 'loading' ? 'Sending...' : 'Send Message'}
-              </button>
-            </form>
-          </motion.div>
+            <button type="submit" disabled={status === 'loading'} className="btn btn-hot">
+              <FiSend size={16} />
+              {status === 'loading' ? 'Sending...' : 'Send Message'}
+            </button>
+          </form>
         </div>
       </div>
     </section>

@@ -7,7 +7,7 @@ export default function App() {
   return (
     <ThemeProvider>
       <NewDesign />
-      <div className="legacy dark relative z-[1]">
+      <div style={{ position: 'relative', zIndex: 1 }}>
         <Contact />
         <Footer />
       </div>
