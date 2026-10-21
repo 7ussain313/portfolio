@@ -7,8 +7,8 @@ const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).
 
 /* ── data ─────────────────────────────────── */
 const FLAG = [
-  {t:'Sentra', c:'AI + SRE', d:'Odoo ERP with a custom car-wash module, monitored by Prometheus, Alertmanager and Grafana. An SRE agent investigates alerts with read-only tools, proposes one allowlisted fix, waits for human approval, verifies, and writes a postmortem to an append-only audit log. 100+ automated tests.', s:'Python · Odoo · PostgreSQL · Prometheus · Grafana · Docker Compose · LLM agents', u:'https://github.com/7ussain313/Sentra'},
-  {t:'TaskFlow', c:'Full stack', d:'Work-item tracker with JWT auth, Manager and Member roles enforced server-side, a transition-table state machine, due-date extension approvals, an activity log, Kanban and timeline views. Unit and e2e tests in GitHub Actions against Postgres.', s:'NestJS · Next.js · TypeScript · PostgreSQL · Prisma · Docker · Jest', u:'https://github.com/7ussain313/TaskFlow'},
+  {t:'Sentra', c:'AI + SRE', d:'Odoo ERP with a custom car-wash module, monitored by Prometheus, Alertmanager and Grafana. An SRE agent investigates alerts with read-only tools, proposes one allowlisted fix, waits for human approval, verifies, and writes a postmortem to an append-only audit log. 100+ automated tests.', s:'Python · Odoo · PostgreSQL · Prometheus · Grafana · Docker Compose · LLM agents', u:'https://github.com/hussainwork/Sentra'},
+  {t:'TaskFlow', c:'Full stack', d:'Work-item tracker with JWT auth, Manager and Member roles enforced server-side, a transition-table state machine, due-date extension approvals, an activity log, Kanban and timeline views. Unit and e2e tests in GitHub Actions against Postgres.', s:'NestJS · Next.js · TypeScript · PostgreSQL · Prisma · Docker · Jest', u:'https://github.com/hussainwork/TaskFlow'},
 ];
 const SELECTED = [
   {t:'Secure Messenger', c:'Mobile', o:'Reboot Coding Institute', art:'cipher',
@@ -39,10 +39,10 @@ const ARCHIVE = [
   ['Neo4flix','Java','Movie recommendations from four Spring Boot microservices on Neo4j, with OAuth 2.0 and two-factor auth.','Spring Boot · Neo4j · Angular'],
   ['Travel Management','Java','Bookings with Stripe and PayPal, Elasticsearch autocomplete, deployed with Ansible and Jenkins, secrets in Vault.','Spring Boot · Elasticsearch · Ansible'],
   ["Let's Play API",'Java','REST CRUD API for users and products with authentication and admin/user roles.','Spring Boot · MongoDB'],
-  ['Click-Shop','Full stack','Multi-role store with cart, promotions, reviews and seller applications, covered by PHPUnit tests.','Laravel 12 · MySQL · PHPUnit','https://github.com/7ussain313/Click-shop'],
+  ['Click-Shop','Full stack','Multi-role store with cart, promotions, reviews and seller applications, covered by PHPUnit tests.','Laravel 12 · MySQL · PHPUnit','https://github.com/hussainwork/Click-shop'],
   ['Angul-It','Web','Multi-stage image CAPTCHA with per-stage validation and progress that survives a refresh.','Angular · TypeScript'],
   ['Custom JS Framework','Web','DOM abstraction, routing, state and events built from scratch, shown with a TodoMVC app.','JavaScript'],
-  ['GraphQL Profile','Web','JWT sign-in, GraphQL queries and hand-built SVG charts of XP and audit statistics.','TypeScript · GraphQL · SVG','https://github.com/7ussain313/GraphQL'],
+  ['GraphQL Profile','Web','JWT sign-in, GraphQL queries and hand-built SVG charts of XP and audit statistics.','TypeScript · GraphQL · SVG','https://github.com/hussainwork/GraphQL'],
   ['Groupie Tracker','Web','Presents bands, concert locations and dates from a REST API.','Go · REST'],
 ];
 const STACK = [
@@ -433,8 +433,8 @@ layoutHS();
     },
     skills: () => print(STACK.map(([h, s]) => `<span class="h">${h.padEnd(26, ' ')}</span>${s.join(', ')}`).join('\n')),
     experience: () => print('<span class="h">2026</span>  IT Intern, Canvas Design Studio. Flutter + Firebase booking app, data model, handover docs.\n<span class="h">    </span>  Reboot Coding Institute (01 Edu). Full-stack program, Java and Mobile tracks.\n<span class="h">2022–2026</span>  B.S. Computer Science, University of Bahrain. Senior project: SooQna.'),
-    contact: () => print('email     hussainali04.dev@gmail.com\nlinkedin  <a href="https://www.linkedin.com/in/hussainali04/" target="_blank" rel="noopener">linkedin.com/in/hussainali04</a>\ngithub    <a href="https://github.com/7ussain313" target="_blank" rel="noopener">github.com/7ussain313</a>'),
-    cv: () => print('<a href="https://7ussain313.github.io/portfolio/Hussain_Ali_CV.pdf" target="_blank" rel="noopener">Hussain_Ali_CV.pdf</a>  (opens in a new tab)'),
+    contact: () => print('email     hussainali04.dev@gmail.com\nlinkedin  <a href="https://www.linkedin.com/in/hussain-work" target="_blank" rel="noopener">linkedin.com/in/hussain-work</a>\ngithub    <a href="https://github.com/hussainwork" target="_blank" rel="noopener">github.com/hussainwork</a>'),
+    cv: () => print('<a href="https://hussainwork.github.io/portfolio/Hussain_Ali_CV.pdf" target="_blank" rel="noopener">Hussain_Ali_CV.pdf</a>  (opens in a new tab)'),
     hire: () => { print('Excellent decision. Taking you to the contact section…', 'p'); setTimeout(() => $('#contact').scrollIntoView({behavior: RM ? 'auto' : 'smooth'}), 700); },
     sudo: () => print('Permission granted after a short interview. Type hire.', 'r'),
     clear: () => { out.innerHTML = ''; },

@@ -133,13 +133,13 @@ export default function About() {
             <div className="flex items-center gap-3 dark:text-slate-400 text-slate-600 text-sm">
               <FiGithub size={16} className="text-violet-500 shrink-0" />
               <a href={personal.github} target="_blank" rel="noopener noreferrer" className="hover:text-violet-500 transition-colors">
-                github.com/7ussain313
+                github.com/hussainwork
               </a>
             </div>
             <div className="flex items-center gap-3 dark:text-slate-400 text-slate-600 text-sm">
               <FiLinkedin size={16} className="text-violet-500 shrink-0" />
               <a href={personal.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-violet-500 transition-colors">
-                linkedin.com/in/hussainali04
+                linkedin.com/in/hussain-work
               </a>
             </div>
           </div>
